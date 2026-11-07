@@ -1,0 +1,12 @@
+[project]
+name = "tabgov"
+version = "1.0.0"
+description = "Governance and data-quality metrics for a Tableau Cloud site on Snowflake"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0", "numpy"]
+[project.optional-dependencies]
+live = ["tableauserverclient>=0.30", "snowflake-connector-python"]
+dev = ["pytest", "duckdb"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

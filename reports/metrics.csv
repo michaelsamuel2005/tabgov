@@ -1,0 +1,11 @@
+metric,definition,value,target,status
+freshness,Share of extracts whose latest refresh succeeded within 36h,0.8611111111111112,>= 0.95,Fail
+refresh_success_30d,"Successful refreshes / all refreshes, last 30 days",0.975925925925926,>= 0.98,Fail
+certified_view_share,Views on certified data sources / all views (90d),0.4749661705006766,>= 0.70,Fail
+stale_rate,Live workbooks with no view in 90 days / live workbooks,0.19444444444444445,<= 0.05,Fail
+orphan_rate,Live content owned by a deactivated user / live content,0.08490566037735849,<= 0.02,Fail
+duplicate_sources,Duplicate data sources outside Archive (count),6.0,== 0,Fail
+kpi_conflicts,Workbooks defining a governed KPI differently (count),4.0,== 0,Fail
+lineage_breaks,Live data sources pointing at a table not in Snowflake (count),5.0,== 0,Fail
+permission_exceptions,Certified workbooks with user-level grants (count),7.0,== 0,Fail
+uncertified_in_certified,Certified workbooks built on an uncertified source (count),5.0,== 0,Fail
